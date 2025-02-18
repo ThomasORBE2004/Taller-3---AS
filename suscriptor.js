@@ -9,11 +9,11 @@ const monitor = [];
 
 // Configuración de Nodemailer con Mailtrap
 const transporter = nodemailer.createTransport({
-    host: "live.smtp.mailtrap.io",
+    host: "sandbox.smtp.mailtrap.io",
     port: 2525, // Puerto de Mailtrap
     auth: {
-        user: "smtp@mailtrap.io", // Reemplaza con el usuario real de Mailtrap
-        pass: "24aa7d6e1129e5452a2d7d05d3481c1b" // Reemplaza con la contraseña real de Mailtrap
+        user: "760a02c3052396", // Reemplaza con el usuario real de Mailtrap
+        pass: "cc0801198aa328" // Reemplaza con la contraseña real de Mailtrap
     }
 });
 

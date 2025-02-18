@@ -5,6 +5,17 @@ const axios = require("axios");  // Importar Axios para hacer peticiones HTTP
 const app = express();
 app.use(express.json());
 
+const os = require('os');
+
+setInterval(() => {
+    const memoryUsage = process.memoryUsage();
+    console.log(`📊 Memoria Usada: ${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`);
+    
+    const cpuUsage = os.loadavg();
+    console.log(`⚡ Carga del CPU (1 min): ${cpuUsage[0].toFixed(2)}`);
+}, 5000); // Ejecuta cada 5 segundos
+
+
 const eventBus = new EventEmitter();
 const queue = [];
 const BALANCEADOR_URL = "http://localhost:3001/comprar"; // URL del balanceador
